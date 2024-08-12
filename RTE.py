@@ -19,6 +19,15 @@ st.set_page_config(page_title="RTE Chatbot", page_icon=":seedling:")
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Sidebar for user input
 st.sidebar.title("Tell us about your interests")
 
